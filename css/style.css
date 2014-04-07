@@ -1,0 +1,151 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+}
+html { height: 101%; } /* always display scrollbars */
+body { font-size: 62.5%; line-height: 1; font-family: Arial, Tahoma, Verdana, sans-serif; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; } 
+
+input { outline: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+body{
+	background: url('../images/stardust.png');
+}
+
+.b-header, .b-content, .b-footer, .header{
+	width: 100%;
+	clear: both;
+}
+
+.content, .footer{
+	width: 940px;
+	margin: auto;
+	clear: both;
+}
+
+.content{
+	padding: 40px 0;
+}
+
+.b-header{
+	background: #fff;
+}
+
+.logo-wrap{
+	padding: 60px 0;
+	border-bottom: 1px solid #d9d9d9;
+	text-align: center;
+}
+
+.logo{
+	font: 30px/30px 'LetterGothicStdRegular';
+	color: #4b4b4b;
+}
+
+.rlogo{
+	color: #e33737;
+}
+
+
+.article-item{
+	display: block;
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.article-item-forward{
+	background: #fff;
+	border: 1px solid #e7e7e7;
+	width: 578px;
+	padding: 20px;
+	position: relative;
+	z-index: 1;
+}
+
+.article-item-back{
+	background: #fff;
+	border: 1px solid #e7e7e7;
+	width: 578px;
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	height: 100%;
+	padding: 0 20px;
+	z-index: 0;
+}
+
+.post-type{
+	width: 40px;
+	height: 40px;
+	background: #ff5b5b;
+	position: absolute;
+	top: 20px;
+	left: -40px;
+	z-index: 1;
+}
+
+.post-type-bg{
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 10px solid #e23535;
+	border-left: 35px solid transparent;
+	border-bottom: 10px solid transparent;
+	top: 60px;
+	left: -40px;
+	position: absolute;
+	z-index: 0;
+}
+
+.article-item-title-link{
+	font: 36px/44px 'MicrosoftYiBaitiRegular';
+	color: #474646;
+}
+
+/*
+fonts 
+*/
+@font-face {
+    font-family: 'LetterGothicStdRegular';
+    src: url('../fonts/lettergothicstd.eot');
+    src: url('../fonts/lettergothicstd.eot') format('embedded-opentype'),
+         url('../fonts/lettergothicstd.woff') format('woff'),
+         url('../fonts/lettergothicstd.ttf') format('truetype'),
+         url('../fonts/lettergothicstd.svg#LetterGothicStdRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'MicrosoftYiBaitiRegular';
+    src: url('../fonts/msyi.eot');
+    src: url('../fonts/msyi.eot') format('embedded-opentype'),
+         url('../fonts/msyi.woff') format('woff'),
+         url('../fonts/msyi.ttf') format('truetype'),
+         url('../fonts/msyi.svg#MicrosoftYiBaitiRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'VrindaRegular';
+    src: url('../fonts/vrinda.eot');
+    src: url('../fonts/vrinda.eot') format('embedded-opentype'),
+         url('../fonts/vrinda.woff') format('woff'),
+         url('../fonts/vrinda.ttf') format('truetype'),
+         url('../fonts/vrinda.svg#VrindaRegular') format('svg');
+}
