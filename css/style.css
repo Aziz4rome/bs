@@ -5,7 +5,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
+  vertical-align: top;
   outline: none;
 }
 html { height: 101%; } /* always display scrollbars */
@@ -24,7 +24,6 @@ table { border-collapse: collapse; border-spacing: 0; }
 img { border: 0; max-width: 100%; }
 
 a { text-decoration: none; }
-a:hover { text-decoration: underline; }
 
 body{
 	background: url('../images/stardust.png');
@@ -64,6 +63,11 @@ body{
 	color: #e33737;
 }
 
+.article{
+	width: 620px;
+	float: left;
+	margin-right: 20px;
+}
 
 .article-item{
 	display: block;
@@ -76,6 +80,7 @@ body{
 	border: 1px solid #e7e7e7;
 	width: 578px;
 	padding: 20px;
+	padding-bottom: 60px;
 	position: relative;
 	z-index: 1;
 }
@@ -115,9 +120,117 @@ body{
 	z-index: 0;
 }
 
+.article-item-title{
+	margin-top: -8px;
+	margin-bottom: 10px;
+}
+
 .article-item-title-link{
 	font: 36px/44px 'MicrosoftYiBaitiRegular';
 	color: #474646;
+}
+
+.article-item-text{
+	font: 16px/24px 'VrindaRegular';
+	color: #8f8f8f;
+}
+
+.meta-author-category{
+	font: 12px 'VrindaRegular';
+	color: #767676;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.meta-author, .meta-category{
+	color: #767676;
+}
+
+.article-item-meta-wrap{
+	display: block;
+	clear: both;
+	width: 100%;
+	border-top: 1px solid #d9d9d9;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 40px;
+}
+
+.article-item-meta{
+	display: block;
+	float: left;
+	height: 40px;
+	padding: 0 20px;
+	border-right: 1px solid #d9d9d9;
+	font: 12px/40px 'VrindaRegular';
+}
+
+.meta-social-share-list{
+	overflow: hidden;
+}
+
+.meta-social-share-list li a{
+	display: block;
+	float: right;
+	width: 40px;
+	height: 40px;
+	border-left: 1px solid #d9d9d9;
+	text-align: center;
+	font: 12px/40px 'VrindaRegular';
+}
+
+.sidebar-wrap{
+	width: 300px;
+	position: relative;
+}
+
+.sidebar-back{
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	background: #fff;
+	width: 298px;
+	border: 1px solid #e7e7e7;
+	height: 100%;
+	z-index: 0;
+}
+
+.sidebar-forward{
+	width: 298px;
+	border: 1px solid #e7e7e7;
+	background: #fff;
+	position: relative;
+	z-index: 1;
+}
+
+.sidebar-menu-list{
+
+}
+
+.sidebar{
+	width: 300px;
+	float: left;
+}
+
+.sidebar-title{
+	color: #474646;
+	font: 36px/36px 'MicrosoftYiBaitiRegular';
+	padding: 20px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.sidebar-menu-list li a{
+	display: block;
+	color: #747474;
+	font-size: 18px;
+	font-family: 'MicrosoftYiBaitiRegular';
+	padding: 12px 20px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.sidebar-menu-list li:last-child a{
+	border-bottom: none;
 }
 
 /*
