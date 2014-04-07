@@ -29,12 +29,12 @@ body{
 	background: url('../images/stardust.png');
 }
 
-.b-header, .b-content, .b-footer, .header{
+.b-header, .b-content, .b-footer, .header,{
 	width: 100%;
 	clear: both;
 }
 
-.content, .footer{
+.content, .footer,.header-menu-wrap{
 	width: 940px;
 	margin: auto;
 	clear: both;
@@ -61,6 +61,48 @@ body{
 
 .rlogo{
 	color: #e33737;
+}
+
+.header-menu-wrap{
+	height: 40px;
+}
+
+.menu-list{
+
+}
+
+.menu-list li a{
+	display: block;
+	float: left;
+	height: 40px;
+	padding: 0 10px;
+	color: #747474;
+	font: 18px/40px 'MicrosoftYiBaitiRegular';
+	border-left: 1px solid #d9d9d9;
+}
+
+.menu-list li:last-child a{
+	border-right: 1px solid #d9d9d9;
+}
+
+.menu-social-list{
+	overflow: hidden;
+	float: right;
+}
+
+.menu-social-list li{
+	display: inline;
+}
+
+.menu-social-list li a{
+	display: block;
+	float: left;
+	width: 40px;
+	height: 40px;
+	border-left: 1px solid #d9d9d9;
+	text-align: center;
+	font: 12px/40px 'MicrosoftYiBaitiRegular';
+	color: #747474;
 }
 
 .article{
@@ -168,6 +210,11 @@ body{
 
 .meta-social-share-list{
 	overflow: hidden;
+	float: right;
+}
+
+.meta-social-share-list li{
+	display: inline;
 }
 
 .meta-social-share-list li a{
