@@ -50,7 +50,7 @@ body{
 
 .logo-wrap{
 	padding: 60px 0;
-	border-bottom: 1px solid #d9d9d9;
+	border-bottom: 1px solid #eaeaea;
 	text-align: center;
 }
 
@@ -78,11 +78,11 @@ body{
 	padding: 0 10px;
 	color: #747474;
 	font: 18px/40px 'MicrosoftYiBaitiRegular';
-	border-left: 1px solid #d9d9d9;
+	border-left: 1px solid #eaeaea;
 }
 
 .menu-list li:last-child a{
-	border-right: 1px solid #d9d9d9;
+	border-right: 1px solid #eaeaea;
 }
 
 .menu-social-list{
@@ -99,9 +99,9 @@ body{
 	float: left;
 	width: 40px;
 	height: 40px;
-	border-left: 1px solid #d9d9d9;
+	border-left: 1px solid #eaeaea;
 	text-align: center;
-	font: 12px/40px 'MicrosoftYiBaitiRegular';
+	font: 12px/40px 'fontello';
 	color: #747474;
 }
 
@@ -147,6 +147,9 @@ body{
 	top: 20px;
 	left: -40px;
 	z-index: 1;
+	font: 12px/40px 'fontello';
+	text-align: center;
+	color: #fff;
 }
 
 .post-type-bg{
@@ -205,7 +208,8 @@ body{
 	height: 40px;
 	padding: 0 20px;
 	border-right: 1px solid #d9d9d9;
-	font: 12px/40px 'VrindaRegular';
+	font: 12px/40px 'fontello';
+	color: #858585;	
 }
 
 .meta-social-share-list{
@@ -224,7 +228,8 @@ body{
 	height: 40px;
 	border-left: 1px solid #d9d9d9;
 	text-align: center;
-	font: 12px/40px 'VrindaRegular';
+	font: 12px/40px 'fontello';
+	color: #858585;
 }
 
 .sidebar-wrap{
@@ -280,6 +285,24 @@ body{
 	border-bottom: none;
 }
 
+.vk:after { content: '\e80e'; }
+.fb:after { content: '\e811'; }
+.tw:after { content: '\e80f'; }
+.g:after { content: '\e810'; }
+.share-vk:after { content: '\e80e'; }
+.share-fb:after { content: '\e811'; }
+.share-tw:after { content: '\e80f'; }
+.share-g:after { content: '\e810'; }
+.search:after{ content: '\e80b'; }
+.meta-date:after {content: '\e80a'; margin-left: 10px; }
+.meta-comments:after {content: '\e805'; margin-left: 10px; }
+.meta-views:after {content: '\e803'; margin-left: 10px; }
+.meta-likes:after {content: '\e800'; margin-left: 10px; }
+.post-type-post:after {content: '\e811'; }
+.post-type-video:after {content: '\e806'; }
+.post-type-music:after {content: '\e811'; }
+.post-type-photo:after {content: '\e807'; }
+
 /*
 fonts 
 */
@@ -308,4 +331,24 @@ fonts
          url('../fonts/vrinda.woff') format('woff'),
          url('../fonts/vrinda.ttf') format('truetype'),
          url('../fonts/vrinda.svg#VrindaRegular') format('svg');
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot?48529301');
+  src: url('../fonts/fontello.eot?48529301#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff?48529301') format('woff'),
+       url('../fonts/fontello.ttf?48529301') format('truetype'),
+       url('../fonts/fontello.svg?48529301#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'fontello';
+    src: url('../fonts/lettergothicstd.eot');
+    src: url('../fonts/lettergothicstd.eot') format('embedded-opentype'),
+         url('../fonts/lettergothicstd.woff') format('woff'),
+         url('../fonts/lettergothicstd.ttf') format('truetype'),
+         url('../fonts/lettergothicstd.svg#LetterGothicStdRegular') format('svg');
 }
