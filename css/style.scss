@@ -2,7 +2,9 @@ $headerBorderColor: #eaeaea;
 $contentBorderColor: #d9d9d9;
 $titleFont: 'MicrosoftYiBaitiRegular';
 $textFont: 'VrindaRegular';
-
+$fsizeText: 16px;
+$fsizeMeta: 12px;
+$fsizeLinks: 18px;
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -81,7 +83,9 @@ body{
 	height: 40px;
 	padding: 0 10px;
 	color: #747474;
-	font: 18px/40px $titleFont;
+	font-size: $fsizeLinks;
+	font-family: $titleFont;
+	line-height: 40px;
 	border-left: 1px solid $headerBorderColor;
 }
 
@@ -92,22 +96,60 @@ body{
 .menu-social-list{
 	overflow: hidden;
 	float: right;
+	overflow: hidden;
+	height: 40px;
 }
 
 .menu-social-list li{
-	display: inline;
+	display: block;
+	float: left;
+	position: relative;
+	width: 40px;
+	height: 40px;	
+	border-left: 1px solid $headerBorderColor;
 }
 
 .menu-social-list li a{
 	display: block;
-	float: left;
 	width: 40px;
 	height: 40px;
-	border-left: 1px solid $headerBorderColor;
 	text-align: center;
-	font: 12px/40px 'fontello';
-	color: #747474;
+	font: 12px/40px 'fontello';	
+	position: absolute;	
 }
+
+.vk, .fb, .tw, .g, .search{
+	color: #747474;
+	top: 0;
+	left: 0;
+}
+
+.vk-hover, .fb-hover, .tw-hover, .g-hover, .search-hover{
+	color: #fff;
+	top: 40px;
+	left: 0;
+}
+
+.vk-hover{
+	background: #44678d;
+}
+
+.fb-hover{
+	background: #3b5998;
+}
+
+.tw-hover{
+	background: #00aced;
+}
+
+.g-hover{
+	background: #d34829;
+}
+
+.search-hover{
+	background: #000;
+}
+
 
 .article{
 	width: 620px;
@@ -279,7 +321,7 @@ body{
 .sidebar-menu-list li a{
 	display: block;
 	color: #747474;
-	font-size: 18px;
+	font-size: $fsizeLinks;
 	font-family: $titleFont;
 	padding: 12px 20px;
 	border-bottom: 1px solid $contentBorderColor;
@@ -302,9 +344,9 @@ body{
 .meta-comments:after {content: '\e805'; margin-left: 10px; }
 .meta-views:after {content: '\e803'; margin-left: 10px; }
 .meta-likes:after {content: '\e800'; margin-left: 10px; }
-.post-type-post:after {content: '\e811'; }
+.post-type-post:after {content: '\e808'; }
 .post-type-video:after {content: '\e806'; }
-.post-type-music:after {content: '\e811'; }
+.post-type-music:after {content: '\e80c'; }
 .post-type-photo:after {content: '\e807'; }
 
 /*
