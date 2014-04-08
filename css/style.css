@@ -79,6 +79,16 @@ body {
 .header-menu-wrap {
   height: 40px; }
 
+.menu-list {
+  position: relative; }
+
+.current-page {
+  height: 2px;
+  background: #e54545;
+  left: 0;
+  bottom: 0;
+  position: absolute; }
+
 .menu-list li a {
   display: block;
   float: left;
@@ -92,6 +102,9 @@ body {
 
 .menu-list li:last-child a {
   border-right: 1px solid #eaeaea; }
+
+.current-page-link {
+  color: #e54545 !important; }
 
 .menu-social-list {
   overflow: hidden;

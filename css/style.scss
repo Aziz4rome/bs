@@ -83,7 +83,15 @@ body{
 }
 
 .menu-list{
+	position: relative;
+}
 
+.current-page{
+	height: 2px;
+	background: $hoverColor;
+	left: 0;
+	bottom: 0;
+	position: absolute;
 }
 
 .menu-list li a{
@@ -100,6 +108,10 @@ body{
 
 .menu-list li:last-child a{
 	border-right: 1px solid $headerBorderColor;
+}
+
+.current-page-link{
+	color: $hoverColor !important;
 }
 
 .menu-social-list{
