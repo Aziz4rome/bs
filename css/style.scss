@@ -5,6 +5,15 @@ $textFont: 'VrindaRegular';
 $fsizeText: 16px;
 $fsizeMeta: 12px;
 $fsizeLinks: 18px;
+$hoverColor: #e54545;
+
+@mixin transition($transition) {
+	-webkit-transition: $transition;  
+	-moz-transition:    $transition;
+	-ms-transition:     $transition; 
+	-o-transition:      $transition;  
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -85,7 +94,7 @@ body{
 	color: #747474;
 	font-size: $fsizeLinks;
 	font-family: $titleFont;
-	line-height: 40px;
+	line-height: 39px;
 	border-left: 1px solid $headerBorderColor;
 }
 
@@ -269,13 +278,45 @@ body{
 
 .meta-social-share-list li a{
 	display: block;
-	float: right;
+	float: left;
 	width: 40px;
 	height: 40px;
 	border-left: 1px solid $contentBorderColor;
 	text-align: center;
 	font: 12px/40px 'fontello';
 	color: #858585;
+	@include transition(0.2s);
+}
+
+.share-vk:hover{
+	background: #44678d;
+	color: #fff;
+}
+
+.share-fb:hover{
+	background: #3b5998;
+	color: #fff;
+}
+
+.share-tw:hover{
+	background: #00aced;
+	color: #fff;
+}
+
+.share-g:hover{
+	background: #d34829;
+	color: #fff;
+}
+
+
+.video-frame{
+	width: 560px;
+	height: 340px;
+}
+
+.video-wrap{
+	width: 100%;
+	text-align: center;
 }
 
 .sidebar-wrap{
@@ -325,10 +366,16 @@ body{
 	font-family: $titleFont;
 	padding: 12px 20px;
 	border-bottom: 1px solid $contentBorderColor;
+	@include transition(0.2s);
 }
 
 .sidebar-menu-list li:last-child a{
 	border-bottom: none;
+}
+
+.sidebar-menu-list li a:hover{
+	background: $hoverColor;
+	color: #fff;
 }
 
 .vk:after { content: '\e80e'; }
@@ -348,6 +395,7 @@ body{
 .post-type-video:after {content: '\e806'; }
 .post-type-music:after {content: '\e80c'; }
 .post-type-photo:after {content: '\e807'; }
+.post-type-quote:after {content: '\e812'; }
 
 /*
 fonts 
