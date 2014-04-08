@@ -36,17 +36,37 @@ $(document).ready(function() {
 		width: widthCurrentPage
 	});
 	navLinksLi.on('mouseover', function() {
-	var $this = $(this),
-		newWidthCurrentPage = $this.outerWidth(),
-		leftCurrentPage = $this.offset().left - navLinksList.offset().left + 1;
-	currentPage.stop().animate({
-		left: leftCurrentPage,
-		width: newWidthCurrentPage
-	}, speed);
-	}).on('mouseleave', function() {
-	currentPage.stop().animate({
-		left: leftCurrentLink,
-		width: widthCurrentPage
-	}, speed);
-});
+		var $this = $(this),
+			newWidthCurrentPage = $this.outerWidth(),
+			leftCurrentPage = $this.offset().left - navLinksList.offset().left + 1;
+		currentPage.stop().animate({
+			left: leftCurrentPage,
+			width: newWidthCurrentPage
+		}, speed);
+		}).on('mouseleave', function() {
+		currentPage.stop().animate({
+			left: leftCurrentLink,
+			width: widthCurrentPage
+		}, speed);
+	});
+
+	var searchForm = $('.search-form'),
+		searchField = searchForm.find('.search-field'),
+		searchVal = searchField.val();
+	searchForm.append('<span class="search-span-submit"></span>');
+
+	$('.search').on('click', function(e) {
+		e.preventDefault();
+		socialList.fadeOut(function() {
+			searchForm.fadeIn();
+		});
+		searchField.attr('autofocus', true);
+	});
+	searchField.on('blur', function() {
+		searchForm.fadeOut(function() {
+			socialList.fadeIn();
+		});
+		searchField.val(searchVal);
+	});
+	
 });

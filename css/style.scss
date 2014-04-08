@@ -171,6 +171,47 @@ body{
 	background: #000;
 }
 
+.search-form{
+	position: relative;
+	float: right;
+	display: none;
+}
+
+.search-field{
+	width: 120px;
+	height: 20px;
+	padding: 10px;
+	border: none;
+	border-left: 1px solid $headerBorderColor;
+}
+
+.search-submit, .search-span-submit{
+	width: 40px;
+	height: 40px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+.search-submit{
+	position: relative;
+	z-index: 1;
+}
+
+.search-span-submit{
+	width: 38px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font: 14px/40px 'fontello';
+	text-align: center;
+	background: #fff;
+	z-index: 0;	
+	border-left: 1px solid $headerBorderColor;
+	border-right: 1px solid $headerBorderColor;
+}
+
+.search-span-submit:after{ content: '\e80b'; }
 
 .article{
 	width: 620px;
