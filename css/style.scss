@@ -104,6 +104,7 @@ body{
 	font-family: $titleFont;
 	line-height: 39px;
 	border-left: 1px solid $headerBorderColor;
+	box-sizing: border-box;
 }
 
 .menu-list li:last-child a{

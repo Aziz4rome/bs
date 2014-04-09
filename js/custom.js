@@ -29,16 +29,20 @@ $(document).ready(function() {
 	var currentPage = $('.current-page'),
 		navLinksList = $('.menu-list'),
 		navLinksLi = navLinksList.find('a'),
-		currentLink = $('.current-page-link'),
-		widthCurrentPage = currentLink.outerWidth() - 1,
-		leftCurrentLink = currentLink.offset().left - navLinksList.offset().left + 1;
-	currentPage.css({
-		width: widthCurrentPage
-	});
+		currentLink = $('.current-page-link');
+	setTimeout(function() {
+	window.widthCurrentPage = currentLink.outerWidth() + 1,
+	window.leftCurrentLink = currentLink.offset().left - navLinksList.offset().left;
+	currentPage.stop().animate({
+		width: widthCurrentPage,
+		left: leftCurrentLink
+	}, speed);
+	}, 100)
+
 	navLinksLi.on('mouseover', function() {
 		var $this = $(this),
-			newWidthCurrentPage = $this.outerWidth(),
-			leftCurrentPage = $this.offset().left - navLinksList.offset().left + 1;
+			newWidthCurrentPage = $this.outerWidth() + 1,
+			leftCurrentPage = $this.offset().left - navLinksList.offset().left;
 		currentPage.stop().animate({
 			left: leftCurrentPage,
 			width: newWidthCurrentPage
@@ -93,7 +97,5 @@ $(document).ready(function() {
 		$(document).scroll(function() {
 			appendItems();
 		});
-
 	});
-	
 });

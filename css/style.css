@@ -98,7 +98,8 @@ body {
   font-size: 18px;
   font-family: "MicrosoftYiBaitiRegular";
   line-height: 39px;
-  border-left: 1px solid #eaeaea; }
+  border-left: 1px solid #eaeaea;
+  box-sizing: border-box; }
 
 .menu-list li:last-child a {
   border-right: 1px solid #eaeaea; }
