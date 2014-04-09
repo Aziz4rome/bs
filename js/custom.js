@@ -30,14 +30,14 @@ $(document).ready(function() {
 		navLinksList = $('.menu-list'),
 		navLinksLi = navLinksList.find('a'),
 		currentLink = $('.current-page-link');
-	setTimeout(function() {
-	window.widthCurrentPage = currentLink.outerWidth() + 1,
-	window.leftCurrentLink = currentLink.offset().left - navLinksList.offset().left;
-	currentPage.stop().animate({
-		width: widthCurrentPage,
-		left: leftCurrentLink
-	}, speed);
-	}, 100)
+	setTimeout(function() {		
+		window.widthCurrentPage = currentLink.outerWidth() + 1,
+		window.leftCurrentLink = currentLink.offset().left - navLinksList.offset().left;
+		currentPage.stop().animate({
+			width: widthCurrentPage,
+			left: leftCurrentLink
+		}, speed);	
+	}, 400)
 
 	navLinksLi.on('mouseover', function() {
 		var $this = $(this),
@@ -53,6 +53,8 @@ $(document).ready(function() {
 			width: widthCurrentPage
 		}, speed);
 	});
+
+	
 
 	var searchForm = $('.search-form'),
 		searchField = searchForm.find('.search-field');
