@@ -69,21 +69,24 @@ $(document).ready(function() {
 
 	var contentList = $('.article-list'),
 		contentListItem = contentList.find('li');
-	contentListItem.css('opacity', 0);
+	contentListItem.css({
+		opacity: 0,
+		top: 80
+	});
 
 	
 		contentListItem.each(function(index, elem) {
 
-		function appendItems() {
-			var offsetTop = $(elem).offset().top,
-				scrollTop = $(document).scrollTop() + $(window).height()/1.5;
-
-			if (parseInt(offsetTop) < parseInt(scrollTop)) {
-				$(elem).animate({
-					opacity: 1
-				});
+			function appendItems() {
+				var offsetTop = $(elem).offset().top;
+				var scrollTop = $(document).scrollTop() + $(window).height()/1.2;
+				if (parseInt(scrollTop) > parseInt(offsetTop)) {
+					$(elem).animate({
+						opacity: 1,
+						top: 0
+					});
+				}
 			}
-		}
 		
 		appendItems();
 
