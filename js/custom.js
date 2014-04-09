@@ -67,6 +67,30 @@ $(document).ready(function() {
 		});
 	});
 
+	var contentList = $('.article-list'),
+		contentListItem = contentList.find('li');
+	contentListItem.css('opacity', 0);
 
+	
+		contentListItem.each(function(index, elem) {
+
+		function appendItems() {
+			var offsetTop = $(elem).offset().top,
+				scrollTop = $(document).scrollTop() + $(window).height()/1.5;
+
+			if (parseInt(offsetTop) < parseInt(scrollTop)) {
+				$(elem).animate({
+					opacity: 1
+				});
+			}
+		}
+		
+		appendItems();
+
+		$(document).scroll(function() {
+			appendItems();
+		});
+
+	});
 	
 });
