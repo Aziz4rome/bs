@@ -25,7 +25,6 @@ $(document).ready(function() {
 		}, speed);
 	});
 
-
 	var currentPage = $('.current-page'),
 		navLinksList = $('.menu-list'),
 		navLinksLi = navLinksList.find('a'),
@@ -54,8 +53,6 @@ $(document).ready(function() {
 		}, speed);
 	});
 
-	
-
 	var searchForm = $('.search-form'),
 		searchField = searchForm.find('.search-field');
 	searchForm.append('<span class="search-span-submit"></span><span class="search-form-close">X</span>');
@@ -79,25 +76,25 @@ $(document).ready(function() {
 		opacity: 0,
 		top: 80
 	});
-
 	
-		contentListItem.each(function(index, elem) {
-
-			function appendItems() {
-				var offsetTop = $(elem).offset().top;
-				var scrollTop = $(document).scrollTop() + $(window).height()/1.2;
-				if (parseInt(scrollTop) > parseInt(offsetTop)) {
-					$(elem).animate({
-						opacity: 1,
-						top: 0
-					});
-				}
-			}
+	contentListItem.each(function(index, elem) {
 		
 		appendItems();
 
 		$(document).scroll(function() {
 			appendItems();
 		});
+
+		function appendItems() {
+			var offsetTop = $(elem).offset().top;
+			var scrollTop = $(document).scrollTop() + $(window).height()/1.2;
+			if (parseInt(scrollTop) > parseInt(offsetTop)) {
+				$(elem).animate({
+					opacity: 1,
+					top: 0
+				});
+			}
+		}
+	
 	});
 });
