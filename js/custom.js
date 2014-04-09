@@ -51,9 +51,8 @@ $(document).ready(function() {
 	});
 
 	var searchForm = $('.search-form'),
-		searchField = searchForm.find('.search-field'),
-		searchVal = searchField.val();
-	searchForm.append('<span class="search-span-submit"></span>');
+		searchField = searchForm.find('.search-field');
+	searchForm.append('<span class="search-span-submit"></span><span class="search-form-close">X</span>');
 
 	$('.search').on('click', function(e) {
 		e.preventDefault();
@@ -62,11 +61,12 @@ $(document).ready(function() {
 		});
 		searchField.attr('autofocus', true);
 	});
-	searchField.on('blur', function() {
+	$('.search-form-close').on('click', function() {
 		searchForm.fadeOut(function() {
 			socialList.fadeIn();
 		});
-		searchField.val(searchVal);
 	});
+
+
 	
 });

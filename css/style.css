@@ -179,7 +179,7 @@ body {
 .search-span-submit {
   width: 38px;
   position: absolute;
-  right: 0;
+  right: 39px;
   top: 0;
   font: 14px/40px 'fontello';
   text-align: center;
@@ -190,6 +190,17 @@ body {
 
 .search-span-submit:after {
   content: '\e80b'; }
+
+.search-form-close {
+  display: inline-block;
+  cursor: pointer;
+  width: 38px;
+  font: 14px/40px "VrindaRegular";
+  text-align: center;
+  background: #fff;
+  z-index: 0;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea; }
 
 .article {
   width: 620px;

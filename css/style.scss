@@ -201,7 +201,7 @@ body{
 .search-span-submit{
 	width: 38px;
 	position: absolute;
-	right: 0;
+	right: 39px;
 	top: 0;
 	font: 14px/40px 'fontello';
 	text-align: center;
@@ -212,6 +212,18 @@ body{
 }
 
 .search-span-submit:after{ content: '\e80b'; }
+
+.search-form-close{
+	display: inline-block;
+	cursor: pointer;
+	width: 38px;
+	font: 14px/40px $textFont;
+	text-align: center;
+	background: #fff;
+	z-index: 0;	
+	border-left: 1px solid $headerBorderColor;
+	border-right: 1px solid $headerBorderColor;
+}
 
 .article{
 	width: 620px;
